@@ -112,9 +112,11 @@ class _LogInTabState extends State<LogInTab> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  GestureDetector(
+                  InkWell(
+
                     onTap: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>const BottomNavigationAppBar()));
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>const BottomNavAppBar()));
+
                     },
                     child: Container(
                       height: 50,
@@ -150,8 +152,8 @@ class _LogInTabState extends State<LogInTab> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Container(
-                        height: 45,width: MediaQuery.sizeOf(context).width*0.44,
-                        padding: const EdgeInsets.symmetric(vertical: 5),
+                        height: 45,width: MediaQuery.sizeOf(context).width*0.41,
+                        padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 5),
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
                             color: AppColors.primaryWhite,
@@ -171,7 +173,7 @@ class _LogInTabState extends State<LogInTab> {
                               const Image(
                                   height: 25,width: 25,
                                   image: AssetImage("assets/icons/sign_up/google.png")),
-                             Spacer(),
+                            const SizedBox(width: 20,),
                               Text(
                                 'Google',
                                 style: AppTextStyles.semiBoldStyle.copyWith(color: AppColors.iconColor),
@@ -182,8 +184,8 @@ class _LogInTabState extends State<LogInTab> {
                       ),
                       const Spacer(),
                       Container(
-                        height: 45,width: MediaQuery.sizeOf(context).width*0.44,
-                        padding: const EdgeInsets.symmetric(vertical: 5),
+                        height: 45,width: MediaQuery.sizeOf(context).width*0.41,
+                        padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 5),
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
                             color: AppColors.mainColor,
@@ -204,7 +206,7 @@ class _LogInTabState extends State<LogInTab> {
                               const Image(
                                   height: 25,width: 25,
                                   image: AssetImage("assets/icons/sign_up/Vector.png")),
-                             Spacer(),
+                              const SizedBox(width: 10,),
                               Text(
                                 'Facebook',
                                 style: AppTextStyles.semiBoldStyle.copyWith(color: AppColors.primaryWhite),

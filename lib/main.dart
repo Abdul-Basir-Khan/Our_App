@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
       ),
-      home: SplashServicesScreen(),
+      home: const SplashServicesScreen(),
     );
   }
 }

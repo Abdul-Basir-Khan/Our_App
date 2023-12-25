@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:our_app/screens/registration/tabs/log_in_tab.dart';
-import 'package:our_app/screens/registration/tabs/sign_up_tab.dart';
+import 'package:our_app/screens/registration/auth_tabs/log_in_tab.dart';
+import 'package:our_app/screens/registration/auth_tabs/sign_up_tab.dart';
 import 'package:our_app/themes/app_colors.dart';
 import 'package:our_app/themes/app_textStyle.dart';
 
@@ -80,7 +80,7 @@ int _currentIndex=0;
                             style: AppTextStyles.semiBoldStyle.copyWith(color: AppColors.primaryWhite),
                           ),
                           const SizedBox(height: 5,),
-                          Container(color: _currentIndex==0?AppColors.primaryWhite:Colors.transparent,height: 2,width: MediaQuery.sizeOf(context).width*0.16,)
+                          Container(color: _currentIndex==0?AppColors.primaryWhite:Colors.transparent,height: 2,width: MediaQuery.sizeOf(context).width*0.17,)
 
                         ],
                       ),
@@ -100,7 +100,7 @@ int _currentIndex=0;
                            style: AppTextStyles.semiBoldStyle.copyWith(color: AppColors.primaryWhite),
                          ),
                          const SizedBox(height: 5,),
-                         Container(color: _currentIndex==1?AppColors.primaryWhite:Colors.transparent,height: 2,width: MediaQuery.sizeOf(context).width*0.16,)
+                         Container(color: _currentIndex==1?AppColors.primaryWhite:Colors.transparent,height: 2,width: MediaQuery.sizeOf(context).width*0.17,)
 
                        ],
                      ),

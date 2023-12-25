@@ -3,23 +3,20 @@ import 'package:our_app/themes/app_colors.dart';
 import 'package:our_app/themes/app_textStyle.dart';
 import 'package:svg_flutter/svg.dart';
 
-
-class BottomNavigationAppBar extends StatefulWidget {
-  const BottomNavigationAppBar({super.key});
+class BottomNavAppBar extends StatefulWidget {
+  const BottomNavAppBar({super.key});
 
   @override
-  _BottomNavigationAppBarState createState() => _BottomNavigationAppBarState();
+  State<BottomNavAppBar> createState() => _BottomNavAppBarState();
 }
 
-class _BottomNavigationAppBarState extends State<BottomNavigationAppBar> {
-  int _currentIndex = 0;
-
-  final List<Widget> _children = [
-    const SizedBox(),
+class _BottomNavAppBarState extends State<BottomNavAppBar> {
+  final List<Widget> _bottomNavItem = [
     const SizedBox(),
     const SizedBox(),
     const SizedBox(),
   ];
+  int _currentIndex = 0;
 
   void onTabTapped(int index) {
     setState(() {
@@ -35,20 +32,19 @@ class _BottomNavigationAppBarState extends State<BottomNavigationAppBar> {
       child: Scaffold(
         key: _scaffoldKey,
         backgroundColor: const Color(0xffFFFFFF),
-        body: _children[_currentIndex],
+        body: _bottomNavItem[_currentIndex],
         bottomNavigationBar: BottomAppBar(
           surfaceTintColor: Colors.white,
           color: AppColors.primaryWhite,
           padding: EdgeInsets.zero,
           height: 70,
           child: Container(
-padding: const EdgeInsets.symmetric(horizontal: 15,vertical: 10),
+            padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
             decoration: BoxDecoration(
-                color:AppColors.mainLight.withOpacity(0.40),
+                color: AppColors.mainLight.withOpacity(0.40),
                 borderRadius: const BorderRadius.only(
                     topLeft: Radius.circular(25),
-                    topRight: Radius.circular(25))
-            ),
+                    topRight: Radius.circular(25))),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
@@ -67,7 +63,7 @@ padding: const EdgeInsets.symmetric(horizontal: 15,vertical: 10),
                     onTabTapped(1);
                   },
                   activeColor: _currentIndex == 1
-                      ?  AppColors.primaryWhite
+                      ? AppColors.primaryWhite
                       : AppColors.mainColor,
                   title: 'Order',
                   icon: 'assets/images/bottom_navigation_bar/order.svg',
@@ -77,7 +73,7 @@ padding: const EdgeInsets.symmetric(horizontal: 15,vertical: 10),
                     onTabTapped(2);
                   },
                   activeColor: _currentIndex == 2
-                      ?  AppColors.primaryWhite
+                      ? AppColors.primaryWhite
                       : AppColors.mainColor,
                   title: 'Profile',
                   icon: 'assets/images/bottom_navigation_bar/Vector.svg',
@@ -113,11 +109,14 @@ class BottomTab extends StatelessWidget {
         children: [
           SvgPicture.asset(
             icon,
-            height: 25,width: 25,
+            height: 25,
+            width: 25,
             fit: BoxFit.cover,
             color: activeColor,
           ),
-          const SizedBox(height: 5,),
+          const SizedBox(
+            height: 5,
+          ),
           Text(
             title,
             style: AppTextStyles.regularStyle.copyWith(color: activeColor),
