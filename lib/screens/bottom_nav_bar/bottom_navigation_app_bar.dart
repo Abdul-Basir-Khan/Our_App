@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:our_app/screens/bottom_nav_bar/home_screen/home_screen.dart';
+import 'package:our_app/screens/bottom_nav_bar/order_screen/order_screen.dart';
 import 'package:our_app/themes/app_colors.dart';
 import 'package:our_app/themes/app_textStyle.dart';
 import 'package:svg_flutter/svg.dart';
@@ -12,8 +14,8 @@ class BottomNavAppBar extends StatefulWidget {
 
 class _BottomNavAppBarState extends State<BottomNavAppBar> {
   final List<Widget> _bottomNavItem = [
-    const SizedBox(),
-    const SizedBox(),
+    const HomeScreen(),
+    OrderScreen(),
     const SizedBox(),
   ];
   int _currentIndex = 0;

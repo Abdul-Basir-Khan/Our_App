@@ -66,6 +66,9 @@ flutter:
     - assets/images/splash_screen/
     - assets/images/choose_account/
     - assets/images/bottom_navigation_bar/
+    - assets/images/home_screen/
+    - assets/images/home_screen/services/
+    - assets/images/home_screen/services_details/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
