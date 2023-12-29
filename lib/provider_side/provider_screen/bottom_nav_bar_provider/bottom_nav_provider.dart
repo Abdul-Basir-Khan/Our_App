@@ -1,23 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:our_app/screens/bottom_nav_bar/home_screen/home_screen.dart';
-import 'package:our_app/screens/bottom_nav_bar/order_screen/order_screen.dart';
-import 'package:our_app/screens/bottom_nav_bar/profile_screen/profile_screen.dart';
+import 'package:our_app/provider_side/provider_screen/bottom_nav_bar_provider/provider_home_screen/home_screen_provider.dart';
+import 'package:our_app/provider_side/provider_screen/bottom_nav_bar_provider/provider_order_screen/provider_order_screen.dart';
+import 'package:our_app/provider_side/provider_screen/bottom_nav_bar_provider/provider_profile_screen/provider_profile_screen.dart';
 import 'package:our_app/themes/app_colors.dart';
 import 'package:our_app/themes/app_textStyle.dart';
 import 'package:svg_flutter/svg.dart';
 
-class BottomNavAppBar extends StatefulWidget {
-  const BottomNavAppBar({super.key});
+class BottomNavProvider extends StatefulWidget {
+  const BottomNavProvider({super.key});
 
   @override
-  State<BottomNavAppBar> createState() => _BottomNavAppBarState();
+  State<BottomNavProvider> createState() => _BottomNavProviderState();
 }
 
-class _BottomNavAppBarState extends State<BottomNavAppBar> {
+class _BottomNavProviderState extends State<BottomNavProvider> {
   final List<Widget> _bottomNavItem = [
-    const HomeScreen(),
-    OrderScreen(),
-   const ProfileScreen(),
+    HomeScreenProvider(),
+   ProviderOrderScreen(),
+    ProviderProfileScreen(),
   ];
   int _currentIndex = 0;
 

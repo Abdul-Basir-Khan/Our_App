@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:our_app/provider_side/provider_screen/bottom_nav_bar_provider/bottom_nav_provider.dart';
 import 'package:our_app/screens/registration/registration_screen.dart';
 import 'package:our_app/themes/app_colors.dart';
 import 'package:our_app/themes/app_textStyle.dart';
@@ -88,7 +89,7 @@ class _ChooseAccountScreenState extends State<ChooseAccountScreen> {
                               context,
                               MaterialPageRoute(
                                   builder: (context) =>
-                                      const RegistrationScreen()));
+                                      const BottomNavProvider()));
                         });
                       },
                       child: Container(
