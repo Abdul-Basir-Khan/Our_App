@@ -74,10 +74,10 @@ class _PendingTabState extends State<PendingTab> {
                                     style: AppTextStyles.regularStyle
                                         .copyWith(color: AppColors.mainColor,fontSize:15),
                                   ),
-                                  Spacer(),
+                                  const Spacer(),
                                   Container(
                                     width: MediaQuery.sizeOf(context).width*0.25,
-                                    padding: EdgeInsets.symmetric(horizontal: 15,vertical: 10),
+                                    padding: const EdgeInsets.symmetric(horizontal: 15,vertical: 10),
                                     decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(10),
                                         color: AppColors.mainColor,

@@ -183,7 +183,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Row(
                       children: List.generate(
                         images.length,
-                        (index) => Padding(
+                        (index) =>
+
+                            Padding(
                           padding: const EdgeInsets.all(5.0),
                           child: Container(
                             width: MediaQuery.sizeOf(context).width * 0.22,
